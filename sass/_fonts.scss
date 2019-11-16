@@ -1,0 +1,20 @@
+body, p, span, li {
+    font-size: $font__body__size;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__tertiary;
+	font-family: $font__code;
+	font-size: $font__body__size;
+	line-height: $font__line-height-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}

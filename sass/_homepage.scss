@@ -1,0 +1,96 @@
+.cats {
+    max-width: $page-width;
+    margin: 0 auto;
+    @include clearfix();
+
+    @include media-max($page-width + 20px) {
+        max-width: 90%;
+    }
+
+    @include media-max(850px) {
+        max-width: 600px;
+    }
+
+
+
+    &--profile {
+        float: left;
+        text-align: center;
+        width: 33.3%;
+        padding: 45px 55px;
+        border: 1px solid rgba(235, 233, 233, 0.884);
+        background: #FFF;
+        z-index: 1;
+
+        @include media-max($page-width + 20px) {
+            padding: 25px 35px;
+        }
+
+        @include media-max(850px) {
+            width: 50%;
+        }
+        
+        @include media-max(500px) {
+            width: 100%;
+        }
+
+        &:hover {
+            box-shadow: rgba(39, 79, 117, 0.2) 0px 40px 90px -30px;
+            z-index: 5;
+            position: relative;
+        }
+
+        // Stops the borders from overlapping
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5) {
+            border-right: none;
+        }
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3) {
+            border-bottom: none;
+        }
+
+        
+
+        &--pic {
+            display: block;
+            
+
+            svg {
+                display: inline-block;
+                max-width: 80px;
+
+                .st0,
+                .st1 {
+                    transition: fill .3s ease;
+                }
+            }
+        }
+
+        &:hover {
+            svg {
+                .st0 {
+                    fill: #a9dbf5;
+                }
+
+                .st1 {
+                    fill: #47a5ce;
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            &:hover {
+                svg {
+                    .st1 {
+                        @include prefix(animation, multi-color-cat 5s infinite);
+                    }
+                }
+            }
+        }
+    }
+}
+

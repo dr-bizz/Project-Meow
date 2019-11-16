@@ -1,0 +1,26 @@
+body {
+    background: $color_fresh-white;
+    padding-top: 60px;
+}
+
+
+@include keyframes(multi-color-cat) {
+    0% {
+        fill: #FF914B;
+    }
+    20% {
+        fill: #ff4b4b;
+    }
+    40% {
+        fill: #b64bff;
+    }
+    60% {
+        fill: #4bb8ff;
+    }
+    80% {
+        fill: #4bff5d;
+    }
+    100% {
+        fill: #c6ff4b;
+    }
+}
