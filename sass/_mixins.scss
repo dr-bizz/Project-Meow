@@ -17,12 +17,6 @@
 	-o-#{$property}: $value;
 }
 
-@mixin media-max($width) {
-    @media only screen and (max-width: #{$width}) {
-        @content;
-    }
-}
-
 // Key frames
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {

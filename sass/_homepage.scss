@@ -3,14 +3,13 @@
     margin: 0 auto;
     @include clearfix();
 
-    @include media-max($page-width + 20px) {
+    @media (max-width: $page-width + 20px) {
         max-width: 90%;
     }
 
-    @include media-max(850px) {
+    @media (max-width: 850px) {
         max-width: 600px;
     }
-
 
 
     &--profile {
@@ -22,15 +21,15 @@
         background: #FFF;
         z-index: 1;
 
-        @include media-max($page-width + 20px) {
+        @media (max-width: $page-width + 20px) {
             padding: 25px 35px;
         }
 
-        @include media-max(850px) {
+        @media (max-width: 850px) {
             width: 50%;
         }
         
-        @include media-max(500px) {
+        @media (max-width: 500px) {
             width: 100%;
         }
 
